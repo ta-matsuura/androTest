@@ -1,10 +1,13 @@
 package com.txm.androtest;
 
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ListFragment;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -64,9 +67,21 @@ public class MainActivity extends Activity {
             
             int resId = R.array.section1;
             switch(mPosition) {
-                case 0:
-                    resId = R.array.section1;
-                    break;
+            case 0:
+              resId = R.array.section1;
+              break;
+        		case 1:
+        			resId = R.array.section2;
+        			break;
+        		case 2:
+        			resId = R.array.section3;
+        			break;
+            case 3:
+              resId = R.array.section4;
+        			break;
+            case 4:
+              resId = R.array.section5;
+            break;
             }
             
             String[] data = getResources().getStringArray(resId);
@@ -119,21 +134,63 @@ public class MainActivity extends Activity {
         }
 
         private void openSection5(int position) {
-
+          Intent intent = null;
+          switch(position) {
+          case 0:
+            intent = new Intent(getActivity(), com.txm.androtest.deviceinfo.BuildInfoActiviity.class);
+            break;
+          }
+        startActivity(intent);
         }
 
         private void openSection4(int position) {
- 
+          Intent intent = null;
+          switch(position) {
+          case 0:
+            intent = new Intent(getActivity(), com.txm.androtest.webview.SimpleWebviewActivity.class);
+            break;
+          }
+        startActivity(intent);
         }
 
         private void openSection3(int position) {
-    }
+        	Intent intent = null;
+            switch(position) {
+            case 0:
+            	intent = new Intent(getActivity(), com.txm.androtest.dialog.AlearDialogSampleActivity.class);
+            	break;
+            case 1:
+            	intent = new Intent(getActivity(), com.txm.androtest.dialog.CommonDialogSampleActivity.class);
+            	break;
+            case 2:
+            	intent = new Intent(getActivity(), com.txm.androtest.dialog.DialogSampleActivity.class);
+            	break;
+            }	  
+        	startActivity(intent);
+        }
 
         private void openSection2(int position) {
-      }
+            switch(position) {
+            case 0:
+
+            	break;
+            }	
+        }
 
         private void openSection1(int position) {
- 
+            
+            switch(position) {
+                case 0:
+                	String pName = "com.kddi.disasterapp";
+                	String aName = "com.kddi.disasterapp.activity.ActivitySettings";
+                	Intent intent = new Intent();
+                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                	// パッケージ名, クラス名をセット
+                	intent.setClassName(pName, aName);
+                	// アプリを起動:
+                	startActivity(intent);
+                	break;
+            }
         }
     }
 }

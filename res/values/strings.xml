@@ -4,5 +4,14 @@
     <string name="app_name">androtest</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_alear_dialog_sample">AlearDialogSampleActivity</string>
+    <string name="title_activity_common_dialog_sample">CommonDialogSampleActivity</string>
+    <string name="button_discription">"Touch a button to show paticular dialog "</string>
+    <string name="item1">"item1"</string>
+    <string name="item2">"item2"</string>
+    <string name="item3">"item3"</string>
+    <string name="title_activity_dialog_sample">DialogSampleActivity</string>
+    <string name="example">ご注文の品は以上でよろしいですか？</string>
+    <string name="title_activity_build_info_activiity">BuildInfoActiviity</string>
 
 </resources>

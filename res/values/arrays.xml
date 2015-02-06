@@ -1,15 +1,28 @@
 <resources>
-
     <string-array name="sections">
-        <item>APN変更</item>
-        <item>次はここに追加</item>
+        <item>他アプリ起動</item>
+        <item>Notification</item>
+        <item>Dialog</item>
+        <item>Webview</item>
+        <item>Device Information</item>
     </string-array>
     <string-array name="section1">
-        <item>次はここに追加</item>
+        <item>startActivity()</item>
         <item>次はここに追加</item>
     </string-array>
     <string-array name="section2">
+        <item>notification（基本）</item>
         <item>次はここに追加</item>
-        <item>次はここに追加</item>
+    </string-array>
+    <string-array name="section3">
+        <item>AlertDialog</item>
+        <item>DialogFragment</item>
+        <item>Dialog (deprecated)</item>
+    </string-array>
+    <string-array name="section4">
+        <item>Simple Webview</item>
+    </string-array>
+    <string-array name="section5">
+        <item>Android.os.Build</item>
     </string-array>
 </resources>
