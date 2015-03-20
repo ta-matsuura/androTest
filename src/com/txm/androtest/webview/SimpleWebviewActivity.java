@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class SimpleWebviewActivity extends Activity {
   WebView webView;
@@ -17,6 +19,16 @@ public class SimpleWebviewActivity extends Activity {
     setContentView(R.layout.activity_webview);
     
     webView = (WebView) findViewById(R.id.web_view);
+//    webView.setWebViewClient(new WebViewClient() {
+//      public boolean shouldOverrideUrlLoading(WebView view, String urlStr) {
+//        // 特定のURLの場合、ダイアログを表示する等
+//        Toast toast = Toast.makeText(SimpleWebviewActivity.this, "urlStr : " + urlStr,
+//            Toast.LENGTH_SHORT);
+//        toast.show();
+//
+//        return false;
+//      }
+//    });
     webView.loadUrl("file:///android_res/raw/simple.html");
 	}
 
