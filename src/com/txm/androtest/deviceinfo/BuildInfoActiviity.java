@@ -42,7 +42,7 @@ public class BuildInfoActiviity extends Activity {
     adapter.add("PRODUCT : " + Build.PRODUCT);
     adapter.add("RADIO : " + Build.RADIO);
     adapter.add("SERIAL : " + Build.SERIAL);
-    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    if(Build.VERSION.SDK_INT >= 21) {
       String[] str32 =  Build.SUPPORTED_32_BIT_ABIS;
       String[] str64 =  Build.SUPPORTED_64_BIT_ABIS;
       String[] str =  Build.SUPPORTED_ABIS;

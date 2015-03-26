@@ -7,7 +7,11 @@
         <item>Device Information</item>
     </string-array>
     <string-array name="section1">
-        <item>startActivity()</item>
+        <item>Cメール起動</item>
+        <item>Eメール起動</item>       
+        <item>LINE起動</item>  
+        <item>Eメール起動(明示的)</item>       
+        
         <item>次はここに追加</item>
     </string-array>
     <string-array name="section2">

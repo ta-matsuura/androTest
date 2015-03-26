@@ -9,6 +9,8 @@ import android.app.ListFragment;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -178,18 +180,37 @@ public class MainActivity extends Activity {
         }
 
         private void openSection1(int position) {
-            
+          String pName;
+          String aName;  
+          Intent intent;
+          PackageManager pm;
             switch(position) {
                 case 0:
-                	String pName = "com.kddi.disasterapp";
-                	String aName = "com.kddi.disasterapp.activity.ActivitySettings";
-                	Intent intent = new Intent();
-                	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                	pName = "com.kddi.android.cmail";
+                	aName = "com.kddi.android.cmail.ui.list.ThreadListActivity";
+                	intent = new Intent();
                 	// パッケージ名, クラス名をセット
                 	intent.setClassName(pName, aName);
                 	// アプリを起動:
                 	startActivity(intent);
                 	break;
+                case 1:
+                   pName = "com.kddi.android.email";
+                   aName = "com.kddi.android.email.ThreadListActivity";
+                  intent = new Intent();
+                  intent.setClassName(pName, aName);
+                  startActivity(intent);
+                  break;
+                case 2:
+                  pm = getPackageManager();
+                  intent = pm.getLaunchIntentForPackage("jp.naver.line.android");
+                  startActivity(intent);
+                  break;
+                case 3:
+                  pm = getPackageManager();
+                  intent = pm.getLaunchIntentForPackage("com.kddi.android.email");
+                  startActivity(intent);                  
+                  break;
             }
         }
     }
